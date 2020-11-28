@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@glimmer/core": "./@glimmer/core.js",
+    "@glimmerx/component": "./@glimmerx/component.js",
+    "@glimmerx/core": "./@glimmerx/core.js",
+    "@glimmerx/modifier": "./@glimmerx/modifier.js"
+  }
+}
