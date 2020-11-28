@@ -8,7 +8,8 @@ export default class App extends Component {
   @tracked task = '';
   logo = logo;
 
-  @action addTodo() {
+  @action addTodo(event) {
+    event.preventDefault();
     this.items = this.items.concat(this.task);
     this.task = '';
   }
@@ -32,7 +33,9 @@ export default class App extends Component {
       {{/each}}
       </ol>
       <p>What needs to be done?</p>
-      <p><input class="todo-input" type="text" {{on "input" this.updateTask}} value={{this.task}}/></p>
-      <p><button class="add-btn" type="button" {{on "click" this.addTodo}}>Add #{{this.count}}</button></p>
+      <form {{on "submit" this.addTodo}}>
+      <p><input autofocus class="todo-input" type="text" {{on "input" this.updateTask}} value={{this.task}}/></p>
+      <p><button class="add-btn" type="submit">Add #{{this.count}}</button></p>
+      </form>
    </div>`;
 }
