@@ -1,6 +1,7 @@
 dependencies:
   '@glimmerx/component': 0.2.5
   '@glimmerx/core': 0.2.5
+  '@glimmerx/modifier': 0.2.5
 devDependencies:
   '@babel/core': 7.12.9
   '@babel/plugin-proposal-class-properties': 7.12.1_@babel+core@7.12.9
@@ -1076,6 +1077,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-iIKuFtw4tzfYW3xwFToiGTZQ6k5lpmDLSc0V8KxagHtux9yKfNLY3lXqhm0dZs+kfmVEiNjpgekMHzP6rmQSkQ==
+  /@glimmer/modifier/2.0.0-beta.7:
+    dependencies:
+      '@glimmer/interfaces': 0.51.1
+      '@simple-dom/interface': 1.4.0
+    dev: false
+    resolution:
+      integrity: sha512-GXpPObr/Dsj71xzN7QKZXYHeWX101j+q0sJwrQH3JkrXVaGohJVTFfRjWsxg1D3Ats/j27QG6Fxu7v/VrdO94w==
   /@glimmer/opcode-compiler/0.51.1:
     dependencies:
       '@glimmer/encoder': 0.51.1
@@ -1201,6 +1209,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-mXQP6RIDumsxnOXlA9tmaFgz6wOsArSS6kCMBHWUFHvlq/ssbLWzKcA8VXMnZKVoJajuP8ous0dQOcG0DzGBgQ==
+  /@glimmerx/modifier/0.2.5:
+    dependencies:
+      '@glimmer/core': 2.0.0-beta.7
+      '@glimmer/modifier': 2.0.0-beta.7
+      ember-cli-babel: 7.23.0
+    dev: false
+    resolution:
+      integrity: sha512-NB8pA/Evo0kQkZpzCuBN1NIo4ASSF5Rh3+p/PdpJOj9EHPk0d0MJH7/fAoyKJCrPRSswI9/ZpGAqf4FPlw713Q==
   /@npmcli/move-file/1.0.1:
     dependencies:
       mkdirp: 1.0.4
@@ -1451,7 +1467,7 @@ packages:
       istextorbinary: 2.1.0
       mkdirp: 0.5.5
       rimraf: 2.7.1
-      rsvp: 3.6.2
+      rsvp: 3.2.1
       username-sync: 1.0.2
     dev: false
     resolution:
@@ -3225,7 +3241,7 @@ packages:
       integrity: sha1-mEcocL8igTL8vdhoEputEsPAKeM=
   /promise-map-series/0.2.3:
     dependencies:
-      rsvp: 3.6.2
+      rsvp: 3.2.1
     dev: false
     resolution:
       integrity: sha1-wtN3r8kyU/a9A9u3d1XriKsgqEc=
@@ -3402,12 +3418,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-B8tKXfJa3Z6Cbrxn3Mn9idsn2Eo=
-  /rsvp/3.6.2:
-    dev: false
-    engines:
-      node: 0.12.* || 4.* || 6.* || >= 7.*
-    resolution:
-      integrity: sha512-OfWGQTb9vnwRjwtA2QwpG2ICclHC3pgXZO5xt8H2EfgDquO0qVdSb5T88L4qJVAEugbS56pAuV4XZM58UX8ulw==
   /rsvp/4.8.5:
     dev: false
     engines:
@@ -3853,6 +3863,7 @@ specifiers:
   '@glimmerx/babel-plugin-component-templates': ^0.2.5
   '@glimmerx/component': ^0.2.5
   '@glimmerx/core': ^0.2.5
+  '@glimmerx/modifier': ^0.2.5
   '@snowpack/babel-plugin-package-import': ^1.1.5
   '@snowpack/plugin-babel': ^2.1.4
   prettier: ^2.0.5

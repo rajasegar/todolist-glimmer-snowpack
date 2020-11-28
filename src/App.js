@@ -1,25 +1,37 @@
 import Component, { hbs, tracked } from '@glimmerx/component';
+import { on, action } from '@glimmerx/modifier';
 import './App.css';
 import logo from './logo.svg';
 
 export default class App extends Component {
-  @tracked count = 0;
+  @tracked items = [];
+  @tracked task = '';
 
-  constructor() {
-    super(...arguments);
-    setInterval(() => {
-      this.count++;
-    }, 1000);
-    this.logo = logo;
+  @action addTodo() {
+    this.items = this.items.concat(this.task);
+    this.task = '';
   }
+
+  @action updateTask(ev) {
+    this.task = ev.target.value;
+  }
+
+  get count() {
+    return this.items.length + 1;
+  }
+
 
   static template = hbs`
    <div id="intro">
       <img src={{this.logo}}/>
-      <h1>Hello, glimmerx!</h1>
-      <h3>
-        You can get started by editing <code>src/App.js</code>
-      </h3>
-      <h2>Time elapsed since start: {{this.count}} seconds</h2>
+      <h1>Todo-List: Glimmer + Snowpack</h1>
+      <ol>
+      {{#each this.items as |item|}}
+      <li>{{item}}</li>
+      {{/each}}
+      </ol>
+      <p>What needs to be done?</p>
+      <p><input class="todo-input" type="text" {{on "input" this.updateTask}} value={{this.task}}/></p>
+      <p><button class="add-btn" type="button" {{on "click" this.addTodo}}>Add #{{this.count}}</button></p>
    </div>`;
 }
