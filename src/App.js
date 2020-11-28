@@ -6,6 +6,7 @@ import logo from './logo.svg';
 export default class App extends Component {
   @tracked items = [];
   @tracked task = '';
+  logo = logo;
 
   @action addTodo() {
     this.items = this.items.concat(this.task);
