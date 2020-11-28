@@ -27,9 +27,7 @@ module.exports = {
   devOptions: {
     /* ... */
   },
-  buildOptions: {
-    /* ... */
-  },
+  buildOptions: { },
   proxy: {
     /* ... */
   },

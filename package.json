@@ -4,7 +4,8 @@
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.js\"",
-    "lint": "prettier --check \"src/**/*.js\""
+    "lint": "prettier --check \"src/**/*.js\"",
+    "deploy": "npm run build && surge ./build todolist-glimmer-snowpack.surge.sh"
   },
   "dependencies": {
     "@glimmerx/component": "^0.2.5",
@@ -20,6 +21,7 @@
     "@snowpack/babel-plugin-package-import": "^1.1.5",
     "@snowpack/plugin-babel": "^2.1.4",
     "prettier": "^2.0.5",
-    "snowpack": "^2.17.1"
+    "snowpack": "^2.17.1",
+    "surge": "^0.21.7"
   }
 }
