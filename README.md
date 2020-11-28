@@ -1,4 +1,4 @@
-# snowpack-app-template-glimmer
+# todolist-glimmer-snowpack
 
 [![npm version](http://img.shields.io/npm/v/snowpack-app-template-glimmer.svg?style=flat)](https://npmjs.org/package/snowpack-app-template-glimmer "View this project on npm")
 
