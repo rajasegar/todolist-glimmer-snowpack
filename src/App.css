@@ -1,11 +1,10 @@
 #app {
   background: #1E293B;
   min-height: 100vh;
-
   display: grid;
   align-items: center;
   justify-content: center;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 #intro {
@@ -16,10 +15,12 @@
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.image-wrapper {
+  text-align:center;
+}
 #intro img {
-  float: left;
-  width: 6.5em;
-  margin: 0.5em 2em;
+  width: 100px;
+  margin-top: 1em;
 }
 
 #intro a {
@@ -28,12 +29,17 @@
 
 .todo-input {
   padding: 1em;
-  width: 300px;
+  width: 100%;
 }
 
 .add-btn {
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   cursor: pointer;
   font-weight: bold;
   font-size: 1em;
+  text-align:right;
+}
+
+.text-center {
+  text-align:center;
 }

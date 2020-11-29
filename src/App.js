@@ -22,10 +22,9 @@ export default class App extends Component {
     return this.items.length + 1;
   }
 
-
   static template = hbs`
    <div id="intro">
-      <img src={{this.logo}}/>
+      <div class="image-wrapper"><img src={{this.logo}}/></div>
       <h1>Todo-List: Glimmer + Snowpack</h1>
       <ol>
       {{#each this.items as |item|}}
@@ -37,5 +36,7 @@ export default class App extends Component {
       <p><input autofocus class="todo-input" type="text" {{on "input" this.updateTask}} value={{this.task}}/></p>
       <p><button class="add-btn" type="submit">Add #{{this.count}}</button></p>
       </form>
+
+      <p class="text-center"><a href="https://github.com/rajasegar/todolist-glimmer-snowpack">Github</a></p>
    </div>`;
 }
